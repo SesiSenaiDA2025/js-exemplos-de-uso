@@ -53,10 +53,31 @@
       "A simplicidade é o último grau de sofisticação. – Leonardo da Vinci",
       "O sucesso é a soma de pequenos esforços repetidos dia após dia. – Robert Collier",
       "Acredite que você pode e você já está no meio do caminho. – Theodore Roosevelt",
-      "Não importa o quão devagar você vá, desde que você não pare. – Confúcio"
+      "Não importa o quão devagar você vá, desde que você não pare. – Confúcio",
+
+      "A resiliência leva o indivíduo ao sucesso!! – Ignacio Neto"
+
     ];
 
-       // 1ª Digitação (Resolva aqui o exercício)
+      // Seleciona os elementos com o DOM
+      const quoteElement = document.getElementById('quote');
+      const newQuoteButton = document.getElementById('newQuoteButton');
+
+      // Função para alternar as frases aleatóriamente
+      function generateQuote() {
+        // Função para sortear aleatóriamente
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+
+        // Mostra a citação correspondente
+        quoteElement.textContent = quotes[randomIndex];
+      }
+
+      // Evento de clique para o botão alterar a citação
+      newQuoteButton.addEventListener('click', generateQuote);
+
+    // Carrega uma nova citação na página
+    generateQuote();
+
 
 
   </script>
